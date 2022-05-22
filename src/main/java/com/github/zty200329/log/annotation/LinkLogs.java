@@ -1,4 +1,4 @@
-package com.zty.log.annotation;
+package com.github.zty200329.log.annotation;
 
 import java.lang.annotation.*;
 

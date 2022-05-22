@@ -1,10 +1,10 @@
-package com.zty.log.aop;
+package com.github.zty200329.log.aop;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.zty.log.annotation.LinkLog;
-import com.zty.log.domain.LogObject;
-import com.zty.log.service.LinkLogService;
+import com.github.zty200329.log.annotation.LinkLog;
+import com.github.zty200329.log.domain.LogObject;
+import com.github.zty200329.log.service.LinkLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
@@ -50,7 +50,7 @@ public class LinkLogAspect {
 
     private final DefaultParameterNameDiscoverer discoverer = new DefaultParameterNameDiscoverer();
 
-    @Before(value = "@annotation(com.zty.log.annotation.LinkLog) || @annotation(com.zty.log.annotation.LinkLogs)")
+    @Before(value = "@annotation(com.github.zty200329.log.annotation.LinkLog) || @annotation(com.github.zty200329.log.annotation.LinkLogs)")
     public void before(JoinPoint joinPoint){
         try {
             List<LogObject> logObjects = new ArrayList<>();
@@ -115,7 +115,7 @@ public class LinkLogAspect {
         }
         return method;
     }
-    @Around(value = "@annotation(com.zty.log.annotation.LinkLog) || @annotation(com.zty.log.annotation.LinkLogs)")
+    @Around(value = "@annotation(com.github.zty200329.log.annotation.LinkLog) || @annotation(com.github.zty200329.log.annotation.LinkLogs)")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable{
         Object result;
         try {

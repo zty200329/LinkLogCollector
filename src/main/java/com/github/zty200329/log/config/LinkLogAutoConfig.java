@@ -1,4 +1,4 @@
-package com.zty.log.config;
+package com.github.zty200329.log.config;
 
 import org.springframework.context.annotation.ComponentScan;
 
