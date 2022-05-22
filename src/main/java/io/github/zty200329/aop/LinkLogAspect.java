@@ -1,10 +1,10 @@
-package com.github.zty200329.log.aop;
+package io.github.zty200329.aop;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.github.zty200329.log.annotation.LinkLog;
-import com.github.zty200329.log.domain.LogObject;
-import com.github.zty200329.log.service.LinkLogService;
+import io.github.zty200329.annotation.LinkLog;
+import io.github.zty200329.domain.LogObject;
+import io.github.zty200329.service.LinkLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
@@ -50,7 +50,7 @@ public class LinkLogAspect {
 
     private final DefaultParameterNameDiscoverer discoverer = new DefaultParameterNameDiscoverer();
 
-    @Before(value = "@annotation(com.github.zty200329.log.annotation.LinkLog) || @annotation(com.github.zty200329.log.annotation.LinkLogs)")
+    @Before(value = "@annotation(io.github.zty200329.annotation.LinkLog) || @annotation(io.github.zty200329.annotation.LinkLogs)")
     public void before(JoinPoint joinPoint){
         try {
             List<LogObject> logObjects = new ArrayList<>();
@@ -63,7 +63,7 @@ public class LinkLogAspect {
             for(LinkLog annotation : annotations){
                 LogObject logObject = new LogObject();
                 logObjects.add(logObject);
-                String uuIdSpEL = annotation.uuid();
+                String uuIdSpEL = annotation.uuId();
                 String messageSpEL = annotation.message();
                 String uuId = uuIdSpEL;
                 String message = messageSpEL;
@@ -115,7 +115,7 @@ public class LinkLogAspect {
         }
         return method;
     }
-    @Around(value = "@annotation(com.github.zty200329.log.annotation.LinkLog) || @annotation(com.github.zty200329.log.annotation.LinkLogs)")
+    @Around(value = "@annotation(io.github.zty200329.annotation.LinkLog) || @annotation(io.github.zty200329.annotation.LinkLogs)")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable{
         Object result;
         try {

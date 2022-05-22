@@ -1,4 +1,4 @@
-package com.github.zty200329.log.config;
+package io.github.zty200329.config;
 
 import org.springframework.context.annotation.ComponentScan;
 
@@ -7,6 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @version 1.0
  * @date 2022/5/21 9:56 下午
  */
-@ComponentScan("com.zty.log")
+@ComponentScan("io.github.zty200329")
 public class LinkLogAutoConfig {
 }

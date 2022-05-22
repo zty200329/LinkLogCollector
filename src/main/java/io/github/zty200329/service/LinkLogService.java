@@ -1,6 +1,7 @@
-package com.github.zty200329.log.service;
+package io.github.zty200329.service;
 
-import com.github.zty200329.log.domain.LogObject;
+
+import io.github.zty200329.domain.LogObject;
 
 /**
  * @author zty200329

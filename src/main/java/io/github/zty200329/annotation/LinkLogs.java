@@ -1,4 +1,4 @@
-package com.github.zty200329.log.annotation;
+package io.github.zty200329.annotation;
 
 import java.lang.annotation.*;
 
@@ -11,5 +11,5 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LinkLogs {
-    LinkLog[]value();
+    LinkLog[] value();
 }

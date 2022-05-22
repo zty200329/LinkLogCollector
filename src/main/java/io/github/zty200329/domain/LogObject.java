@@ -1,4 +1,4 @@
-package com.github.zty200329.log.domain;
+package io.github.zty200329.domain;
 
 import lombok.Data;
 

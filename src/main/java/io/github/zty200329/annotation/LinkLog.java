@@ -1,4 +1,4 @@
-package com.github.zty200329.log.annotation;
+package io.github.zty200329.annotation;
 
 import java.lang.annotation.*;
 
@@ -17,7 +17,7 @@ public @interface LinkLog {
      * 业务唯一id
      * @return
      */
-    String uuid();
+    String uuId();
 
     /**
      * 业务类型
