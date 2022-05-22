@@ -7,7 +7,6 @@ import java.util.Date;
 /**
  * @author zty200329
  * @version 1.0
- * @date 2022/5/21 9:47 下午
  */
 @Data
 public class LogObject {
